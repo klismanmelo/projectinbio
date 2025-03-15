@@ -1,6 +1,4 @@
-import Header from "@/app/components/landing-page/header";
- import Button from "@/app/components/UI/button";
- import TextInput from "@/app/components/UI/text-input";
+import Header from "@/app/components/landing-page/header"
  import { Rocket } from "lucide-react";
  import CreateLinkForm from "./create-link-form";
  
