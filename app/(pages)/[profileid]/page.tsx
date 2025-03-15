@@ -7,7 +7,7 @@ import ProjectCard from "@/app/components/common/project-card";
  export default async function ProfilePage({
    params,
  }: {
-   params: { profileId: string };
+  params: Promise<{ profileId: string }>;
  }) {
    const { profileId } = await params;
  
