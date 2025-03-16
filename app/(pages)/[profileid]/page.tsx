@@ -43,7 +43,7 @@ export default async function ProfilePage({
          <ProjectCard />
          <ProjectCard />
          <ProjectCard />
-         {isOwner && <NewProject profileId={profileid} />}
+         {isOwner && <NewProject profileid={profileid} />}
        </div>
        <div className="absolute bottom-4 right-0 left-0 w-min mx-auto">
          <TotalVisits />
