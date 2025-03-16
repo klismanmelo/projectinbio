@@ -26,11 +26,12 @@
  
    try {
      await db
-       .collection("projects")
+       .collection("profiles")
        .doc(profileid)
        .collection("projects")
-       .doc()
+       .doc(generatedid)
        .set({
+         id: generatedid,
          userId: session.user?.id,
          projectName,
          projectDescription,

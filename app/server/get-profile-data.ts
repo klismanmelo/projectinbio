@@ -41,7 +41,7 @@ export async function getProfileData(profileid: string) {
 
 export async function getProfileProjects(profileid: string) {
   const snapshot = await db
-    .collection("projects")
+    .collection("profiles")
     .doc(profileid)
     .collection("projects")
     .get();
