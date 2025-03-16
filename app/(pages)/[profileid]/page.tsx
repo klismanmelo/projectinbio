@@ -10,23 +10,23 @@ import NewProject from "./new-project";
 export default async function ProfilePage({
   params,
 }: {
-  params: Promise<{ profileId: string }>;
+  params: Promise<{ profileid: string }>;
 }) {
-  const { profileId } = await params;
-console.log(profileId);
-   /*const profileData = await getProfileData(profileId);
+  const { profileid } = await params;
+  console.log(profileid);
+   const profileData = await getProfileData(profileid);
 
   if (!profileData) return notFound();
 
   const session = await auth();
 
-  const isOwner = profileData.userId === session?.user?.id;*/
+  const isOwner = profileData.userId === session?.user?.id
  
    return (
      <div className="relative h-screen flex p-20 overflow-hidden">
        <div className="fixed top-0 left-0 w-full flex justify-center items-center gap-1 py-2 bg-background-tertiary">
           <span>Você está usando a versão trial.</span>
-          <Link href={`/${profileId}/upgrade`}>
+          <Link href={`/${profileid}/upgrade`}>
            <button className="text-accent-green font-bold">
              Faça o upgrade agora!
            </button>
@@ -43,7 +43,7 @@ console.log(profileId);
          <ProjectCard />
          <ProjectCard />
          <ProjectCard />
-         {/*isOwner && <NewProject profileId={profileId} />*/}
+         {isOwner && <NewProject profileId={profileid} />}
        </div>
        <div className="absolute bottom-4 right-0 left-0 w-min mx-auto">
          <TotalVisits />
